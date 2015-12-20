@@ -1,6 +1,8 @@
 inoremap jk <esc>
 set number
 set hlsearch
+
+" Configure indentation
 set expandtab
 set tabstop=4       " tab is worth 4
 set shiftwidth=4    " indent by 4
