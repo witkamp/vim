@@ -1,3 +1,8 @@
+set nocompatible
+let &runtimepath = printf('%s/vimfiles,%s,%s/vimfiles/after',$VIM,$VIMRUNTIME,$VIM)
+let s:portable = expand('<sfile>:p:h')
+let &runtimepath = printf('%s,%s,%s/after',s:portable,$runtimepath,s:portable)
+
 inoremap jk <esc>
 set number
 set hlsearch
