@@ -16,8 +16,7 @@ filetype plugin indent on
 syntax on
 set encoding=utf-8
 let mapleader = ","
-set spell spelllang=en_us
-colorscheme evening
+colorscheme elflord
 " Windows GUI Config
 if has("gui_win32")
     set guifont=Consolas:h12:cANSI
