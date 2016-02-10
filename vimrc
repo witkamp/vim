@@ -6,6 +6,8 @@ let &runtimepath = printf('%s/vimfiles,%s,%s/vimfiles/after',$VIM,$VIMRUNTIME,$V
 let s:portable = expand('<sfile>:p:h')
 let &runtimepath = printf('%s,%s,%s/after',s:portable,$runtimepath,s:portable)
 
+execute pathogen#infect()
+
 " Key mappings
 inoremap jk <esc>
 let mapleader = ","
@@ -28,5 +30,4 @@ if has("gui_win32")
     set guifont=Consolas:h12:cANSI
 endif
 
-execute pathogen#infect()
 
