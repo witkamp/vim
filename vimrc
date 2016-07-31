@@ -20,6 +20,7 @@ set expandtab
 set tabstop=4       " tab is worth 4
 set shiftwidth=4    " indent by 4
 
+set scrolloff=10
 filetype plugin indent on
 syntax on
 set encoding=utf-8
