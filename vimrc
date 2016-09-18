@@ -12,8 +12,15 @@ execute pathogen#infect()
 inoremap jk <esc>
 let mapleader = ","
 
+" Window movements
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
 set number
 set hlsearch
+set incsearch
 
 " Indentation
 set expandtab
