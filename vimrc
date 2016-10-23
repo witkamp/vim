@@ -2,9 +2,9 @@
 
 " Change VIMRUNTIME to be relative to this directory
 set nocompatible
-let &runtimepath = printf('%s/vimfiles,%s,%s/vimfiles/after',$VIM,$VIMRUNTIME,$VIM)
-let s:portable = expand('<sfile>:p:h')
-let &runtimepath = printf('%s,%s,%s/after',s:portable,$runtimepath,s:portable)
+let &runtimepath    = printf('%s/vimfiles,%s,%s/vimfiles/after',$VIM,$VIMRUNTIME,$VIM)
+let s:portable      = expand('<sfile>:p:h')
+let &runtimepath    = printf('%s,%s,%s/after',s:portable,$runtimepath,s:portable)
 
 execute pathogen#infect()
 
@@ -18,14 +18,30 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Better Line-wrap movements
+nnoremap j gj
+nnoremap k gk
+
 set number
 set hlsearch
 set incsearch
 
+" Be smart
+set smartcase
+set smarttab
+set smartindent
+
 " Indentation
-set expandtab
+set expandtab       " spaces not tabs
 set tabstop=4       " tab is worth 4
 set shiftwidth=4    " indent by 4
+
+set wildignore+=*.swp,.git
+set wildmode=longest,list,full
+set wildmenu
+set completeopt+=longest
+
+set t_Co=256        " 256 terminal colors
 
 set scrolloff=10
 filetype plugin indent on
@@ -33,6 +49,7 @@ syntax on
 set encoding=utf-8
 
 colorscheme elflord
+set guifont=inconsolata:h14
 " Windows GUI Config
 if has("gui_win32")
     set guifont=Consolas:h12:cANSI
