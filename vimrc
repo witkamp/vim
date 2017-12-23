@@ -49,10 +49,18 @@ syntax on
 set encoding=utf-8
 
 colorscheme elflord
-set guifont=inconsolata:h14
 " Windows GUI Config
 if has("gui_win32")
     set guifont=Consolas:h12:cANSI
+    colorscheme solarized
+endif
+
+" MacVim GUI Config
+if has("gui_macvim")
+    set guifont=inconsolata:h16
+    colorscheme solarized
+    set visualbell
+    set noerrorbells
 endif
 
 
